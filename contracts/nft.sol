@@ -44,7 +44,6 @@ contract MyNft is ERC721, ERC721Enumerable, ERC721URIStorage, Pausable, Ownable,
     function _burn(uint256 tokenId) internal override(ERC721, ERC721URIStorage) {
         super._burn(tokenId);
     }
-
     function tokenURI(uint256 tokenId)
         public
         view
