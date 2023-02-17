@@ -6,12 +6,12 @@ async function main() {
     const [owner, addr1, addr2] = await ethers.getSigners();
     
     const deployedNFTContract = await nftContract.deploy();
-    
-    const IPFS = "QmWSQyZgSaj64tq5yYKP8ccUEtXuKowz9RySAtECgKyE1X";
-    
+        
     await deployedNFTContract.deployed();
   
     console.log("NFT Contract Address:", deployedNFTContract.address);
+
+    const IPFS = "QmWSQyZgSaj64tq5yYKP8ccUEtXuKowz9RySAtECgKyE1X";
 
     const MyMint = await deployedNFTContract.safeMint(owner.address,IPFS);
     console.log(MyMint)
